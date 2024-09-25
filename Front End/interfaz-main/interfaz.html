@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- Estructura básica del documento HTML -->
+<html lang="en">
+<!-- Sección de metadatos y enlaces a hojas de estilo y scripts -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<!-- Sección principal del contenido de la página -->
+<body>
+    <div class="container">
+        <!-- Columna izquierda -->
+        <div class="left-column">
+            <!-- Perfil -->
+             <br>
+            <div class="profile">
+                <img src="logo.png" alt="Perfil">
+                <p>Perfil</p>
+                <p>correodeprueba@gmail.com</p>
+            </div>
+            <!-- Soporte -->
+            <div class="support">
+        
+                <h3>Soporte</h3>
+                <ul>
+                
+                    <li><img src="rendimiento.png" width= 20px height="20 px"> Comparar Rendimiento</li>
+                    <br>
+                    <li><img src="configuracion.png" width= 20px height="20 px" > Configuración</li>
+                    <br> 
+                    <li><img src="comparacion.png" width= 20px height="20 px"> Prioridades</li>
+                    <br>
+                    <li><img src="comentarios.png" width= 20px height="20 px"> Comentarios</li>
+                    <br>
+                    <li><img src="nube.png" width= 20px height="20 px"> Archivo</li>
+                </ul>
+            
+            </div>
+            <!-- Filtro de periodo -->
+             <br>
+
+            <div class="filter-period">
+                <img src="filtro.png" width= 50px height="50 px">
+                <p>Filtrar Periodo</p>
+                <select>
+                    <option value="septiembre-octubre">Septiembre - Octubre</option>
+                </select>
+            </div>
+            <br> 
+            <button class="salir">Salir</button>
+        </div>
+            <br>
+            <br> 
+        <!-- Columna central -->
+        <div class="center-column">
+            <!-- Usuarios -->
+            <div class="users">
+                <h3>Usuarios</h3>
+                <p>21</p>
+                <button>Ver más</button>
+            </div>
+            <!-- Calendario -->
+            <div class="calendar">
+<!-- Sección de metadatos y enlaces a hojas de estilo y scripts -->
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                    <title>Calendario con Javascript</title>
+                    <link rel="stylesheet" href="./calendario.css/calendario.css">
+                </head>
+<!-- Sección principal del contenido de la página -->
+                <body>
+                    <div class="root">
+                        <div class="calendar" id="calendar">
+                
+                        </div>
+                
+                    </div>
+                    <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+                    <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
+                    <script  type="text/javascript" src="./calendario.js/calendario.js"></script>
+                    <script type="text/javascript">
+                        let calendar = new Calendar('calendar');
+                        calendar.getElement().addEventListener('change', e => {
+                            console.log(calendar.value().format('LLL'));
+                        });
+                    </script>
+<!-- Fin del contenido principal -->
+                </body>       
+            </div>  
+            <!-- Roles, Estadísticas, Datos Médicos, Turnos -->
+            <div class="bottom-row">
+                <div class="card">
+                    <img src="user.png" width= 50px height="50 px">
+                    <p>Roles</p>
+                </div>
+                <div class="card">
+                    <img src="estadisticas.png" width= 30px height="30 px">
+                    <p>Estadísticas</p>
+                </div>
+                <div class="card">
+                    <img src="usuario.png" width= 20px height="20 px">
+                    <p>Datos Médicos</p> 
+                </div>
+                <div class="card">
+                    <img src="turnos.png" width= 20px height="20 px">
+                    <p>Turnos</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="right-column">
+            <!-- Reporte diario -->
+            <div class="daily-report">
+                <h3>Reporte diario</h3>
+                <img src="grafica.png" width= "20 px" height="20px">
+            </div>
+            <!-- Gestión de usuarios -->
+            <div class="user-management">
+                <br>
+                <h3>Gestion de Usuarios</h3>
+                <img src="gestion de usuarios.png" width= "60px" height="80 px">
+                <br>
+                <button>Añadir</button>
+                <button>Eliminar</button>
+            </div>
+            <!-- Inicio, Listas, Documentos, Cliente, Promedio, Revisiones -->
+    
+            <div class="side-menu">
+                <ul>
+                    <li><img src="inicio.png" width="20px"> Inicio</li>
+                    <li><img src="listas.png" width="20px"> Listas</li>
+                    <li><img src="documentos.png" width="20px"> Documentos</li>
+                    <li><img src="usuario.png" width="20px"> Cliente</li>
+                    <li><img src="estadisticas.png" width="20px"> Promedio</li>
+                    <li><img src="revision.png" width="20px"> Revisiones</li>
+                </ul>
+            </div>
+
+            <!-- Gestiona tus usuarios, Obten Metricas en Tiempo Real -->
+             <br>
+        
+            <div class="bottom-row">
+                <div class="card">
+                    <br>
+                    <p>Gestiona Tus Usuarios</p>
+                </div>
+                <div class="card">
+                    <br>
+                    <p>Obten Metricas en Tiempo Real</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="animacion.js"></script>
+
+<!-- Fin del contenido principal -->
+</body>
+</html>

@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<!-- Estructura básica del documento HTML -->
+<html lang="en">
+<!-- Sección de metadatos y enlaces a hojas de estilo y scripts -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de gestion</title>
+    <link rel="stylesheet" href="styles_combined.css">
+    <script>
+        function loadPage(pageUrl) {
+            const iframe = document.getElementById("main-iframe");
+            iframe.src = pageUrl;
+            history.pushState({ page: pageUrl }, '', pageUrl);
+        }
+
+        window.onpopstate = function(event) {
+            const iframe = document.getElementById("main-iframe");
+            if (event.state && event.state.page) {
+                iframe.src = event.state.page;
+            } else {
+                iframe.src = "interfaz-main/interfaz.html"; // Volver a la página de inicio
+            }
+        };
+    </script>
+    <style>
+        nav {
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white; /* Cambiar el color de los títulos a blanco */
+            cursor: pointer;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        hr {
+            border: none;
+            height: 2px;
+            background-color: white; /* Cambiar la línea a blanco */
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<!-- Sección principal del contenido de la página -->
+<body>
+    <header>
+        <h1>Front End - Plataforma de Gestión</h1>
+        <hr>
+        <nav>
+            <a onclick="loadPage('interfaz-main/interfaz.html')">Inicio</a> |
+            <a onclick="loadPage('Gestion Usuarios/index.html')">Gestión de Usuarios</a> |
+            <a onclick="loadPage('gestion_roles_perfiles.html')">Gestión de Roles y Perfiles</a> |
+            <a onclick="loadPage('login/index.html')">Login</a>
+        </nav>
+    </header>
+    <section id="main-section">
+        <iframe id="main-iframe" src="interfaz-main/interfaz.html" width="100%" height="600px" frameborder="0">
+            Tu navegador no soporta iframes.
+        </iframe>
+    </section>
+    <script src="script_combined.js"></script>
+<!-- Fin del contenido principal -->
+</body>
+</html>
